@@ -33,15 +33,24 @@ body {
 }
 
 .sheet {
-  width: 210mm;
-  height: 297mm;
+  width: 148.5mm;
+  height: 210mm;
   background: var(--sheet);
   color: var(--ink);
-  padding: 12mm 10mm;
+  padding: 7mm 6mm 6mm;
   display: flex;
   flex-direction: column;
   box-shadow: 0 10px 28px rgba(40, 36, 28, 0.14);
   position: relative;
+}
+
+.sheet-title {
+  margin: 0 0 2mm;
+  text-align: center;
+  font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 .side {
@@ -59,15 +68,15 @@ body {
   flex: 1;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, 1fr);
-  gap: 4mm 6mm;
+  grid-template-rows: repeat(6, 1fr);
+  gap: 1.5mm 4mm;
   min-height: 0;
 }
 
 .item {
   display: grid;
-  grid-template-columns: 42mm 1fr;
-  gap: 3mm;
+  grid-template-columns: 24mm 1fr;
+  gap: 2mm;
   align-items: center;
   color: inherit;
   text-decoration: none;
@@ -76,20 +85,20 @@ body {
 }
 
 .mark {
-  width: 42mm;
-  height: 42mm;
+  width: 24mm;
+  height: 24mm;
   line-height: 0;
 }
 
-.mark svg { width: 42mm; height: 42mm; display: block; }
+.mark svg { width: 24mm; height: 24mm; display: block; }
 
 .heading {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: 15px;
-  line-height: 1.25;
+  font-size: 12px;
+  line-height: 1.15;
 }
 
-@page { size: A4 portrait; margin: 0; }
+@page { size: A5 portrait; margin: 0; }
 
 @media print {
   body { background: white; }
